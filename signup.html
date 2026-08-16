@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | PocketMate</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <main class="auth-shell">
+        <section class="auth-intro" aria-label="PocketMate introduction">
+            <a class="brand" href="homepage.html">
+                <img src="images/logo.png" alt="">
+                <span>PocketMate</span>
+            </a>
+            <div class="intro-copy">
+                <span class="eyebrow">START YOUR MONEY JOURNEY</span>
+                <h1>Build habits<br><strong>that take you further.</strong></h1>
+                <p>One simple account for your expenses, budgets, goals, and shared plans.</p>
+            </div>
+            <p class="intro-note">Your future self will thank you.</p>
+        </section>
+
+        <section class="auth-panel">
+            <div class="form-wrap">
+                <a class="mobile-brand" href="homepage.html">PocketMate</a>
+                <p class="form-kicker">GET STARTED</p>
+                <h2>Create your account</h2>
+                <p class="form-subtitle">It takes less than a minute.</p>
+
+                <form action="dashboard.html" method="get">
+                    <div class="field">
+                        <label for="signup-name">Full name</label>
+                        <input type="text" id="signup-name" name="name" placeholder="Your full name" autocomplete="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="signup-email">Email address</label>
+                        <input type="email" id="signup-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required>
+                        </div>
+                        <div class="field">
+                            <label for="signup-confirm-password">Confirm password</label>
+                            <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Repeat password" minlength="8" autocomplete="new-password" required>
+                        </div>
+                    </div>
+
+                    <label class="checkbox-label terms-label">
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the <a href="#terms">terms of service</a> and privacy policy.</span>
+                    </label>
+
+                    <button type="submit" class="submit-button">Create Account <span aria-hidden="true">&#8594;</span></button>
+                </form>
+
+                <p class="switch-auth">Already have an account? <a href="signin.html">Sign in</a></p>
+                <a class="back-link" href="homepage.html"><span aria-hidden="true">&#8592;</span> Back to home</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

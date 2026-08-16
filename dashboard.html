@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PocketMate Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard_dark.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="PocketMate Logo">
+            <h2>PocketMate</h2>
+        </div>
+
+        <nav class="navigation">
+            <a href="dashboard.html" class="nav-item active">
+                <span class="nav-icon">▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="expense_manager.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <span>Expense Manager</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">▥</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+            <a href="homepage.html" class="nav-item logout">
+                <span class="nav-icon">↪</span>
+                <span>Logout</span>
+            </a>
+        </nav>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <div class="dashboard-title">
+                <span>▣</span>
+                DASHBOARD
+            </div>
+
+            <div class="profile-area">
+                <span class="notification">🔔</span>
+
+                <div class="profile">
+                    <div class="profile-picture">
+                        👩🏻
+                    </div>
+                    <span>Suhani</span>
+                    <span class="arrow">▼</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <h1>Hello, Suhani 👋</h1>
+            <p>Track your expenses and achieve your financial goals.</p>
+        </section>
+
+        <!-- ================= SUMMARY CARDS ================= -->
+        <section class="summary-cards">
+
+            <!-- TOTAL INCOME -->
+            <div class="summary-card income">
+                <div class="card-icon">💼</div>
+                <div>
+                    <p>Total Income</p>
+                    <h2>₹25,000</h2>
+                    <small class="increase">▲ 12% vs last month</small>
+                </div>
+            </div>
+
+            <!-- TOTAL EXPENSES -->
+            <div class="summary-card expense">
+                <div class="card-icon">👜</div>
+                <div>
+                    <p>Total Expenses</p>
+                    <h2>₹16,000</h2>
+                    <small class="increase">▲ 8% vs last month</small>
+                </div>
+            </div>
+
+            <!-- TOTAL SAVINGS -->
+            <div class="summary-card savings">
+                <div class="card-icon">⏱</div>
+                <div>
+                    <p>Total Savings</p>
+                    <h2>₹9,000</h2>
+                    <small class="increase">▲ 15% vs last month</small>
+                </div>
+            </div>
+
+            <!-- BUDGET LEFT -->
+            <div class="summary-card budget">
+                <div class="card-icon">💰</div>
+                <div>
+                    <p>Budget Left</p>
+                    <h2>₹4,000</h2>
+                    <small class="decrease">▼ 20% vs last month</small>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= MIDDLE SECTION ================= -->
+        <section class="middle-grid">
+
+            <!-- SPENDING OVERVIEW -->
+            <div class="panel spending-panel">
+                <h3>Spending Overview</h3>
+
+                <div class="spending-content">
+                    <div class="donut-chart">
+                        <div class="donut-center">
+                            <strong>₹16,000</strong>
+                            <span>Total</span>
+                        </div>
+                    </div>
+
+                    <div class="legend">
+                        <div>
+                            <span class="dot food"></span>
+                            <span>Food</span>
+                            <b>35%</b>
+                        </div>
+                        <div>
+                            <span class="dot transport"></span>
+                            <span>Transport</span>
+                            <b>18%</b>
+                        </div>
+                        <div>
+                            <span class="dot books"></span>
+                            <span>Education</span>
+                            <b>20%</b>
+                        </div>
+                        <div>
+                            <span class="dot entertainment"></span>
+                            <span>Entertainment</span>
+                            <b>12%</b>
+                        </div>
+                        <div>
+                            <span class="dot others"></span>
+                            <span>Others</span>
+                            <b>15%</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUDGET PROGRESS -->
+            <div class="panel budget-panel">
+                <h3>Budget Progress</h3>
+
+                <p class="label">Monthly Budget</p>
+                <h2>₹20,000</h2>
+
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+
+                <div class="progress-info">
+                    <span>
+                        Spent
+                        <strong>₹16,000</strong>
+                    </span>
+                    <span>
+                        Left
+                        <strong>₹4,000</strong>
+                    </span>
+                    <b>80%</b>
+                </div>
+
+                <a href="expense_manager.html#monthly-budget" class="btn" style="text-decoration: none; text-align: center;">
+                    <button type="button">View Details</button>
+                </a>
+            </div>
+
+            <!-- RECENT TRANSACTIONS -->
+            <div class="panel transactions-panel">
+                <div class="panel-heading">
+                    <h3>Recent Transactions</h3>
+                    <a href="expense_manager.html">View All</a>
+                </div>
+
+                <div class="transaction">
+                    <span class="transaction-icon pink">🍕</span>
+                    <div>
+                        <strong>Pizza</strong>
+                        <small>10 May</small>
+                    </div>
+                    <b>-₹250</b>
+                </div>
+
+                <div class="transaction">
+                    <span class="transaction-icon blue">📚</span>
+                    <div>
+                        <strong>Books</strong>
+                        <small>10 May</small>
+                    </div>
+                    <b>-₹500</b>
+                </div>
+
+                <div class="transaction">
+                    <span class="transaction-icon purple">🚌</span>
+                    <div>
+                        <strong>Bus Pass</strong>
+                        <small>09 May</small>
+                    </div>
+                    <b>-₹120</b>
+                </div>
+
+                <div class="transaction">
+                    <span class="transaction-icon orange">☕</span>
+                    <div>
+                        <strong>Coffee</strong>
+                        <small>08 May</small>
+                    </div>
+                    <b>-₹200</b>
+                </div>
+
+                <div class="transaction">
+                    <span class="transaction-icon green">💼</span>
+                    <div>
+                        <strong>Salary</strong>
+                        <small>07 May</small>
+                    </div>
+                    <b class="positive">+₹25,000</b>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= BOTTOM SECTION ================= -->
+        <section class="bottom-grid">
+
+            <!-- FRIENDS -->
+            <div class="panel friends-panel">
+                <h3>Friends Summary</h3>
+
+                <div class="friends">
+                    <!-- RAHUL -->
+                    <div class="friend-card rahul">
+                        <div class="avatar">👨🏻</div>
+                        <div class="friend-info">
+                            <strong>Rahul</strong>
+                            <small class="owes">Owes you</small>
+                            <b class="amount-green">₹250</b>
+                        </div>
+                        <a href="expense_manager.html?friend=rahul#split-expense">
+                            <button type="button">View Details</button>
+                        </a>
+                    </div>
+
+                    <!-- AMAN -->
+                    <div class="friend-card aman">
+                        <div class="avatar">👨🏻</div>
+                        <div class="friend-info">
+                            <strong>Aman</strong>
+                            <small class="you-owe">You owe</small>
+                            <b class="amount-red">₹120</b>
+                        </div>
+                        <a href="expense_manager.html?friend=aman#split-expense">
+                            <button type="button">View Details</button>
+                        </a>
+                    </div>
+
+                    <!-- PRIYA -->
+                    <div class="friend-card priya">
+                        <div class="avatar">👩🏻</div>
+                        <div class="friend-info">
+                            <strong>Priya</strong>
+                            <small class="settled">Settled up</small>
+                            <b class="amount-green">₹0</b>
+                        </div>
+                        <a href="expense_manager.html?friend=priya#split-expense">
+                            <button type="button">View Details</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOP CATEGORIES -->
+            <div class="panel categories-panel">
+                <h3>Top Categories</h3>
+
+                <div class="categories">
+                    <!-- Food (35% of 16,000) -->
+                    <div class="category">
+                        <div class="category-icon food-bg">🛍️</div>
+                        <strong>Food</strong>
+                        <b>₹5,600</b>
+                    </div>
+
+                    <!-- Education (20% of 16,000) -->
+                    <div class="category">
+                        <div class="category-icon education-bg">🎓</div>
+                        <strong>Education</strong>
+                        <b>₹3,200</b>
+                    </div>
+
+                    <!-- Transport (18% of 16,000) -->
+                    <div class="category">
+                        <div class="category-icon transport-bg">🚗</div>
+                        <strong>Transport</strong>
+                        <b>₹2,880</b>
+                    </div>
+
+                    <!-- Others (15% of 16,000) -->
+                    <div class="category">
+                        <div class="category-icon others-bg">🚌</div>
+                        <strong>Others</strong>
+                        <b>₹2,400</b>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
