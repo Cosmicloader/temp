@@ -1,0 +1,19 @@
+@import url("signin.css");
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.terms-label {
+    align-items: flex-start;
+    margin-top: -2px;
+}
+
+@media (min-width: 561px) {
+    .field-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+}

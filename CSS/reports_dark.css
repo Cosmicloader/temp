@@ -1,0 +1,522 @@
+/* =========================================================
+   POCKETMATE - REPORTS DARK THEME
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 85% 15%, #3d1b6d 0%, transparent 40%),
+        radial-gradient(circle at 15% 85%, #250f4a 0%, transparent 45%),
+        linear-gradient(135deg, #110722 0%, #1a0b36 50%, #110722 100%);
+    overflow: hidden;
+    zoom: 1.4;
+}
+
+/* ================= APP LAYOUT ================= */
+.app {
+    width: 100%;
+    height: calc(100vh / 1.4);
+    display: flex;
+    padding: 8px 12px;
+    gap: 14px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 190px;
+    height: 100%;
+    flex-shrink: 0;
+    padding: 18px 12px;
+    background: linear-gradient(180deg, #241145 0%, #190a33 60%, #130728 100%);
+    border: 1px solid rgba(135, 80, 220, 0.25);
+    border-radius: 26px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 6px;
+    margin-bottom: 22px;
+}
+
+.logo img {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.logo h2 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.nav-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: #ad9ec7;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 13px;
+    transition: 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+    background: rgba(117, 64, 229, 0.25);
+}
+
+.nav-item.active {
+    color: #ffffff;
+    background: linear-gradient(90deg, #743ce6 0%, #a24af2 100%);
+    box-shadow: 0 8px 22px rgba(130, 60, 235, 0.45);
+}
+
+.nav-icon {
+    width: 22px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.logout {
+    margin-top: auto;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* ================= TOP BAR ================= */
+.topbar {
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 18px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #743de5, #9c47f0);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    box-shadow: 0 6px 18px rgba(121, 57, 226, 0.4);
+}
+
+.profile-area {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.notification {
+    font-size: 18px;
+    color: #d1b8fc;
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e5d8fb;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7d2bc;
+    border: 2px solid #9c6be0;
+    font-size: 16px;
+}
+
+.arrow {
+    color: #9d88bf;
+    font-size: 9px;
+}
+
+/* ================= FILTER & SUMMARY STATS ================= */
+.filter-stats-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.time-filter, .mini-select {
+    background: #251347;
+    border: 1px solid rgba(135, 80, 220, 0.3);
+    color: #dcd0f3;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.summary-card {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 18px;
+    color: #1a162b;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card.income  { background: linear-gradient(135deg, #a7f3dc 0%, #76ecc8 100%); }
+.summary-card.expense { background: linear-gradient(135deg, #f7caf0 0%, #ea9ce3 100%); }
+.summary-card.savings { background: linear-gradient(135deg, #b9dcfe 0%, #87bff7 100%); }
+.summary-card.budget  { background: linear-gradient(135deg, #fddbbd 0%, #fba886 100%); }
+
+.card-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.48);
+    backdrop-filter: blur(4px);
+    font-size: 18px;
+}
+
+.summary-card p {
+    font-size: 11px;
+    font-weight: bold;
+    color: #2e2640;
+    margin-bottom: 2px;
+}
+
+.summary-card h2 {
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+}
+
+.summary-card small {
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.increase { color: #088a4e; }
+.decrease { color: #d62d3a; }
+
+/* ================= PANELS & CHARTS ================= */
+.charts-row {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 12px;
+}
+
+.panel {
+    background: linear-gradient(145deg, #221242 0%, #1a0c33 100%);
+    border: 1px solid rgba(135, 80, 220, 0.18);
+    border-radius: 20px;
+    padding: 12px 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 0;
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.panel-header h3 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #f1eaff;
+}
+
+/* Category Donut & Legend */
+.category-chart-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.donut-chart {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #a658f5 0% 35%,
+        #ea67da 35% 53%,
+        #5cdbe6 53% 73%,
+        #ffd25e 73% 85%,
+        #82acfa 85% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-center {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: #1c0e35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-center strong {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.donut-center span {
+    font-size: 9px;
+    color: #9f8ebd;
+}
+
+.category-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 9.5px;
+    color: #c9bfe0;
+}
+
+.legend-item {
+    display: grid;
+    grid-template-columns: 8px 68px auto;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-item b {
+    text-align: right;
+    color: #ffffff;
+}
+
+.dot { width: 7px; height: 7px; border-radius: 50%; }
+.food { background: #a658f5; }
+.education { background: #ea67da; }
+.transport { background: #5cdbe6; }
+.entertainment { background: #ffd25e; }
+.others { background: #82acfa; }
+
+/* Line Chart Trend */
+.line-chart-container {
+    flex: 1;
+    display: flex;
+    gap: 6px;
+    align-items: stretch;
+    margin-top: 4px;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #8c7ea3;
+    font-size: 8.5px;
+    padding-bottom: 16px;
+}
+
+.svg-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line-svg {
+    width: 100%;
+    height: 105px;
+}
+
+.x-axis {
+    display: flex;
+    justify-content: space-between;
+    color: #8c7ea3;
+    font-size: 8.5px;
+    padding: 0 10px;
+}
+
+/* Income vs Expenses Bar Chart */
+.chart-indicators {
+    display: flex;
+    gap: 10px;
+    font-size: 9.5px;
+    color: #c9bfe0;
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bar-income-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: #34e0ba;
+    display: inline-block;
+}
+
+.bar-expense-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: #f43f5e;
+    display: inline-block;
+}
+
+.bar-chart-container {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+    margin-top: 6px;
+}
+
+.bars-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 4px;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.bar-pair {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.bar {
+    width: 10px;
+    border-radius: 3px 3px 0 0;
+}
+
+.bar-income { background: #34e0ba; }
+.bar-expense { background: #f43f5e; }
+
+.week-label {
+    font-size: 8px;
+    color: #8c7ea3;
+}
+
+/* Top Spending Category List */
+.spending-bars-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.progress-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.progress-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #c9bfe0;
+}
+
+.progress-meta b {
+    color: #ffffff;
+}
+
+.bar-track {
+    width: 100%;
+    height: 6px;
+    background: #2b1754;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.purple-fill { background: #8c52ff; }
+.blue-fill   { background: #559bf5; }
+.cyan-fill   { background: #34e0ba; }
+.orange-fill { background: #ffa84a; }
+.pink-fill   { background: #f43f5e; }
